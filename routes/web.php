@@ -7,7 +7,8 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-// Weather API Routes - Only keeping the forecast by city route
+// Weather API Routes
 Route::prefix('api/weather')->group(function () {
     Route::get('/forecast/city', [WeatherController::class, 'forecastByCity']);
+    Route::get('/forecast/coordinates', [WeatherController::class, 'forecast']);
 });
