@@ -4,8 +4,6 @@ FROM richarvey/nginx-php-fpm:3.1.6
 # Copy the application code into the container
 COPY . .
 COPY . /var/www/html
-# Or specifically:
-COPY ./vendor /var/www/html/vendor
 # Image config
 ENV SKIP_COMPOSER 1
 ENV WEBROOT /var/www/html/public
